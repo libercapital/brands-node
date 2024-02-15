@@ -45,4 +45,5 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: aws s3 sync ./lib s3://$BUCKET/libs/brands/$VERSION --delete
+      - run: aws s3 sync ./public s3://$BUCKET/libs/brands/assets --delete
 
